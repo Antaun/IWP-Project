@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "project",
   "version": "1.0.0",
@@ -18,3 +19,25 @@
   "author": "Antaun Bobby",
   "license": "ISC"
 }
+=======
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Real-time Chat Application",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "Antaun Bobby",
+  "license": "ISC"
+}
+>>>>>>> ebfff7d3c1b8bea4b37172587706865b458adc7e

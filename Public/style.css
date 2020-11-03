@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root {
 	--dark-color-a: #667aff;
 	--dark-color-b: #7386ff;
@@ -10,13 +11,14 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-family: 'Poppins', sans-serif;
 }
 
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	margin: 150px;
-	background: linear-gradient(to right, #57c1eb 0%, #246fa8 100%);
+	/*background: linear-gradient(to right, #57c1eb 0%, #246fa8 100%);*/
 	display: grid;
 	place-items: center;
 }
@@ -49,10 +51,11 @@ a {
 	margin: 30px auto;
 	overflow: hidden;
 	border-radius: 10px;
+	box-shadow: 2px 9px 25px #0b2a5b;
 }
 
 .chat-header {
-	background: #0048AA;
+	background: #0d3575;
 	color: #fff;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
@@ -70,10 +73,10 @@ a {
 }
 
 .chat-sidebar {
-	background: #0048AA;
+	background: #0d3575;
 	color: #fff;
 	padding: 20px 20px 60px;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 .chat-sidebar h2 {
@@ -92,16 +95,32 @@ a {
 }
 
 .chat-messages {
-	padding: 30px;
+	/*padding: 30px;
 	max-height: 500px;
-	overflow-y: scroll;
+	overflow-y: scroll;*/
+
+	height: 500px;
+    padding: 16px;
+    display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+    overflow-y: auto;
+    padding-top: 40px;
 }
 
 .chat-messages .message {
-	padding: 10px;
+	/*padding: 10px;
 	margin-bottom: 15px;
-	background-color: var(--light-color);
-	border-radius: 5px;
+	
+	border-radius: 5px;*/
+
+	padding: 20px; 
+    border-radius: 4px; 
+    margin-bottom: 40px;
+    max-width: 300px;
+	position: relative;
+	background-color: rgb(231, 231, 231);
+	box-shadow: inset 0 0 1px #111;
 }
 
 
@@ -119,7 +138,8 @@ a {
 
 .chat-form-container {
 	padding: 20px 30px;
-	background-color: #0048AA;
+	background-color: #0d3575	;
+	
 }
 
 .chat-form-container form {
@@ -143,7 +163,7 @@ a {
 .join-header {
 	text-align: center;
 	padding: 20px;
-	background: #0048AA;
+	background: #0d3575;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 }
@@ -151,7 +171,7 @@ a {
 .join-main {
 	padding: 30px 40px;
 	background: #eee;
-	color: #0048AA;
+	color: #0d3575;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
@@ -194,7 +214,7 @@ a {
 	padding: 10px;
 	height: 40px;
 	max-width: 80px;
-	background: #0048AA;
+	background: #0d3575;
 	color: #eee;
 	margin: 0 auto;
 	display: block;

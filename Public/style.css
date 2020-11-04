@@ -18,7 +18,6 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	margin: 150px;
-	/*background: linear-gradient(to right, #57c1eb 0%, #246fa8 100%);*/
 	display: grid;
 	place-items: center;
 }
@@ -95,25 +94,17 @@ a {
 }
 
 .chat-messages {
-	/*padding: 30px;
-	max-height: 500px;
-	overflow-y: scroll;*/
-
 	height: 500px;
     padding: 16px;
     display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
     overflow-y: auto;
-    padding-top: 40px;
+	padding-top: 40px;
+	scrollbar-width: none;
 }
 
-.chat-messages .message {
-	/*padding: 10px;
-	margin-bottom: 15px;
-	
-	border-radius: 5px;*/
-
+/*.chat-messages .message {
 	padding: 20px; 
     border-radius: 4px; 
     margin-bottom: 40px;
@@ -134,7 +125,53 @@ a {
 
 .chat-messages .message .meta span {
 	color: #777;
+}*/
+
+.message-row {
+	display: grid;
+	grid-template-columns: 35%;
+	margin-bottom: 10px;
 }
+
+.you-message {
+	justify-content: end;
+	justify-items: end;
+}
+
+.other-message {
+	justify-content: start;
+	justify-items: start;
+}
+
+.message-text {
+	padding: 9px 14px;
+	margin-bottom: 5px;
+}
+
+.message-time {
+	font-size: 13px;
+	color: #777;
+}
+
+.you-message .message-text {
+	background: #0048AA;
+	color: white;
+	border: 1px solid #0048AA;
+	border-radius: 14px 14px 0 14px;
+}
+
+.other-message .message-text {
+	background: #eee;
+	color: #111;
+	border: 1px solid #ddd;
+	border-radius: 14px 14px 14px 0;
+}
+
+.message-title span {
+	font-size: 12px;
+	text-transform: capitalize;
+}
+
 
 .chat-form-container {
 	padding: 20px 30px;
@@ -158,6 +195,9 @@ a {
 	max-width: 500px;
 	margin: 80px auto;
 	color: #fff;
+	box-shadow: 2px 9px 25px #0b2a5b;
+	border-radius: 10px;
+	overflow: hidden;
 }
 
 .join-header {
@@ -170,8 +210,8 @@ a {
 
 .join-main {
 	padding: 30px 40px;
-	background: #eee;
-	color: #0d3575;
+	background: #0d3575;
+	color: #eee;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
@@ -211,11 +251,12 @@ a {
 .join-main .btn {
 	margin-top: 20px;
 	max-width: 50px;
-	padding: 10px;
+	padding: 8px;
 	height: 40px;
 	max-width: 80px;
-	background: #0d3575;
-	color: #eee;
+	background: #eee;
+	color: #0d3575;
+	font-weight: 600;
 	margin: 0 auto;
 	display: block;
 }
@@ -229,4 +270,8 @@ a {
 	.chat-sidebar {
 		display: none;
 	}
+}
+
+::-webkit-scrollbar{
+	display: none;
 }

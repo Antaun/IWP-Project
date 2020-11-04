@@ -1,5 +1,6 @@
 const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
+const messageRow = document.querySelector(".message-row");
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 
@@ -22,7 +23,7 @@ socket.on('roomUsers', ({ room, users}) => {
 // Message from Server
 socket.on('message', message => {
     console.log(message);
-    outputMessage(message);
+    outputMessage(message, socket.id);
 
     // Scroll Down after getting Message
     chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -43,16 +44,19 @@ chatForm.addEventListener('submit', (e) => {
     e.target.elements.msg.focus();
 })
 
-// Output Message to DOM
-function outputMessage(message){
+
+function outputMessage(message, id) {
     const div = document.createElement('div');
-    div.classList.add('message');
-    div.innerHTML = `<p class="meta">${message.username}<span> ${message.time}</span></p>
-    <p class="text">
-        ${message.text}
-    </p>`;
-    document.querySelector('.chat-messages').appendChild(div);
+    div.classList.add('other-message');
+    if (id === socket.id) {
+        div.classList.add('you-message');
+    }
+    div.innerHTML = ` <div class="message-title"><span>${message.username}</span></div>
+    <div class="message-text">${message.text}</div>
+    <div class="message-time"><span>${message.time}</span></div>`;
+    document.querySelector('.message-row').appendChild(div);
 }
+
 
 // Add Room Name to DOM
 function outputRoomName(room) {

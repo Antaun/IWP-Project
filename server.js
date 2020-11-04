@@ -22,10 +22,11 @@ io.on('connection', socket => {
         socket.join(user.room);
         
         // Welcome the Current User
-        socket.emit('message', formatMessage(botName, 'Welcome to WeTalk!'));
+        socket.emit('message', formatMessage(botName, 'Welcome to WeTalk!', socket.id));
+        console.log(socket.id);
 
         // Broadcast when a User Connects
-        socket.broadcast.to(user.room).emit('message', formatMessage(botName, `${user.username} has joined the Chat!`));
+        socket.broadcast.to(user.room).emit('message', formatMessage(botName, `${user.username} has joined the Chat!`, socket.id));
 
         // Send Users and Room info
         io.to(user.room).emit('roomUsers', { room: user.room, users: getRoomUsers(user.room)});
@@ -34,7 +35,7 @@ io.on('connection', socket => {
     // Listen for chatMessage
     socket.on('chatMessage', (msg) => {
         const user = getCurrentUser(socket.id);
-        io.to(user.room).emit('message', formatMessage(user.username, msg));
+        io.to(user.room).emit('message', formatMessage(user.username, msg, socket.id));
     });
 
     // Broadcast when a User Disconnects
@@ -43,7 +44,7 @@ io.on('connection', socket => {
 
         if(user)
         {
-            io.to(user.room).emit('message', formatMessage(botName, `${user.username} has left the Chat!`));
+            io.to(user.room).emit('message', formatMessage(botName, `${user.username} has left the Chat!`, socket.id));
 
             io.to(user.room).emit('roomUsers', { room: user.room, users: getRoomUsers(user.room)});
         }

@@ -104,11 +104,12 @@ a {
 	display: grid;
 	grid-template-columns: 35%;
 	margin-bottom: 10px;
+	justify-content: space-between;
 }
 
 .you-message {
-	justify-content: end;
-	justify-items: end;
+	align-items: flex-end;
+	
 }
 
 .other-message {
@@ -134,8 +135,8 @@ a {
 }
 
 .other-message .message-text {
-	background: #eee;
-	color: #111;
+	background: linear-gradient(to right, #ff105f, #ffad06);;
+	color: #fff;
 	border: 1px solid #ddd;
 	border-radius: 14px 14px 14px 0;
 }

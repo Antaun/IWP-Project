@@ -50,6 +50,7 @@ chatForm.addEventListener('submit', (e) => {
 
 function outputMessage(message, id) {
     const div = document.createElement('div');
+    div.classList.add('other-message');
     div.classList.add('you-message');
     
     div.innerHTML = ` <div class="message-title"><span>${message.username}</span></div>

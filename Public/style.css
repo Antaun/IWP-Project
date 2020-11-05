@@ -1,14 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-:root {
-	--dark-color-a: #667aff;
-	--dark-color-b: #7386ff;
-	--light-color: #e6e9ff;
-	--success-color: #5cb85c;
-	--error-color: #d9534f;
-}
 
 * {
-	box-sizing: border-box;
+	/*box-sizing: border-box;*/
 	margin: 0;
 	padding: 0;
 	font-family: 'Poppins', sans-serif;
@@ -35,11 +28,11 @@ a {
 .btn {
 	cursor: pointer;
 	padding: 5px 15px;
-	background: #eee;
 	color: #000000;
 	border: 0;
 	font-size: 17px;
 	font-weight: 500;
+	background: linear-gradient(to right, #ff105f, #ffad06);
 }
 
 /* Chat Page */
@@ -74,7 +67,7 @@ a {
 }
 
 .chat-sidebar {
-	background: #1b1b1b;
+	background: #202225;
 	color: #fff;
 	padding: 20px 20px 60px;
 	overflow-y: auto;
@@ -99,7 +92,7 @@ a {
 	height: 500px;
     padding: 16px;
 	display: flex;
-	background-color: white;
+	background-color: #292b2f	;
 	flex-direction: column;
 	justify-content: flex-end;
     overflow-y: auto;
@@ -173,6 +166,7 @@ a {
 .message-title span {
 	font-size: 12px;
 	text-transform: capitalize;
+	color: #777
 }
 
 
@@ -214,15 +208,101 @@ a {
 
 .join-main {
 	padding: 30px 40px;
+	max-width: 500px;
 	background: #1b1b1b;
 	color: #eee;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
+	overflow: hidden;
 }
 
-.join-main p {
-	margin-bottom: 20px;
+
+.button-box {
+	width: 220px;
+	margin: 35px auto;
+	position: relative;
+	border-radius: 30px;
+	background: #202225;
 }
+
+.toggle-button {
+	padding: 10px 30px;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	outline: none;
+	position: relative;
+	color: #fff;
+}
+
+#lbtn {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background: linear-gradient(to right, #ff105f, #ffad06);
+	border-radius: 30px;
+	transition: 0.5s;
+}
+
+.jbutton-box {
+	width: auto;
+	height: auto;
+	margin-left: 100px;
+	margin-bottom: 60px;
+	position: relative;
+}
+
+.jbtn {
+	cursor: pointer;
+	padding: 5px 15px;
+	margin-bottom: 40px;
+	position: absolute;
+	background: linear-gradient(to right, #ff105f, #ffad06);
+	border-radius: 30px;
+	color: #fff;
+	border: 0;
+	font-size: 17px;
+	font-weight: 500;
+}
+
+.input-group {
+	top: 10px;
+	position: absolute;
+	width: 280px;
+	transition: 0.5s;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+}
+
+.input-field {
+	width: 100%;
+	padding: 10px 0;
+	margin: 5px 0;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid #999;
+	outline: none;
+	background: transparent;
+}
+
+.check-box {
+	margin: 30px 10px 30px 0;
+}
+
+.room {
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid #999;
+	outline: none;
+	background: transparent;
+}
+
+
 
 .join-main .form-control {
 	margin-bottom: 20px;
@@ -259,7 +339,7 @@ a {
 	height: 40px;
 	max-width: 80px;
 	background: #eee;
-	color: #1b1b1b;
+	color: #000000;
 	font-weight: 600;
 	margin: 0 auto;
 	display: block;

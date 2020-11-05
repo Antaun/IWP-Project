@@ -10,30 +10,33 @@
 			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="styles.css" />
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
 		<title>WeTalk</title>
+		<style>
+			select:required:invalid {
+        		color: #666;
+      		}
+			  
+			option[value=""][disabled] {
+        		display: none;
+      		}
+		</style>
 	</head>
 	<body>
 		<div class="join-container" id="join-container">
-			<header class="join-header">
-				<h1><i class="fas fa-bullhorn"></i> WeTalk</h1>
-			</header>
-			<main class="join-main">
-				<form action="chat.html">
-					<div class="form-control">
-						<label for="username">Username</label>
-						<input
-							type="text"
-							name="username"
-							id="username"
-							placeholder="Enter Username"
-							required
-						/>
-					</div>
-					<div class="form-control">
-						<label for="room">Room</label>
-						<select name="room" id="room">
+			<div class="join-main">
+				<h1 class="header"><i class="fas fa-bullhorn"></i> WeTalk</h1>
+				<div class="button-box">
+					<div id="btn"></div>
+					<button type="button" class="toggle-btn" onclick="login()">Log In</button>
+					<button type="button" class="toggle-btn" onclick="register()">Register</button>
+				</div>
+				<form id="login" action="chat.html" class="input-group">
+						<input type="text" name="username" class="input-field" placeholder="Username" required autocomplete="off"/>
+						<input type="password" name="password" class="input-field" placeholder="Password" required autocomplete="off"/>
+						<select name="room" id="room" class="room" required>
+							<option value="" disabled selected>Room</option>
 							<option value="Internet and Web Programming">Internet and Web Programming</option>
 							<option value="Design and Analysis of Algorithms">Design and Analysis of Algorithms</option>
 							<option value="Computer Oriented Numerical Analysis">Computer Oriented Numerical Analysis</option>
@@ -41,12 +44,40 @@
 							<option value="Formal Language and Automata Theory">Formal Language and Automata Theory</option>
 							<option value="Software Engineering">Software Engineering</option>
 						</select>
-					</div>
-					<button type="submit" class="btn">Join</button>
-				</form>
-			</main>
-		</div>
+						<input type="checkbox" class="check-box"><span>Remember Me</span>
+						<button type="submit" class="submit-btn">Login</button>
 
+				</form>
+
+				<form id="register" action="chat.html" class="input-group">
+						<input type="text" name="username" class="input-field" placeholder="Username" required autocomplete="off"/>
+						<input type="email" name="email" class="input-field" placeholder="Email" required autocomplete="off"/>
+						<input type="password" name="password" class="input-field" placeholder="Password" required autocomplete="off"/>
+						<input type="checkbox" class="check-box"><span>I agree to the Terms & Conditions</span>
+						<button type="submit" class="submit-btn">Register</button>
+
+					
+				</form>
+			</div>
+		</div>
+		
+		<script>
+			var x = document.getElementById("login");
+			var y = document.getElementById("register");
+			var z = document.getElementById("btn");
+			
+			function register() {
+				x.style.left = "-400px";
+				y.style.left = "10px";
+				z.style.left = "110px";
+			}
+
+			function login() {
+				x.style.left = "10px";
+				y.style.left = "450px";
+				z.style.left = "0";
+			}
+		</script>
 		
 	</body>
 </html>

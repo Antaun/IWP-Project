@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.join-container{
+    height: 100%;
+    width: 100%;
+    background-image: url('5.jpg');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.join-main {
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    margin-top: 200px;
+    background: #1b1b1b;
+    box-shadow: 2px 9px 25px #1b1b1b;
+	border-radius: 20px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.header{
+    padding: 20px;
+    padding-left: 110px;
+    color: #fff;
+}
+
+.button-box {
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    border-radius: 30px;
+    background: #202225;
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    color: #fff;
+}
+ 
+#btn {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.input-group {
+    top: 180px;
+    position: absolute;
+    padding-left: 50px;
+    justify-content: center;
+    width: 280px;
+    transition: 0.5s;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    color: #fff;
+    outline: none;
+    background: transparent;
+}
+
+.room {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid #999;
+	outline: none;
+	background: transparent;
+}
+
+.submit-btn {
+    width: 30%;
+    padding: 10px 30px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    color: #fff;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box{
+    margin: 10px 10px 30px 0;
+}
+
+span{
+    color: #777;
+    font-size: 12px;
+}
+
+#login {
+    left: 10px;
+    /*z-index: 22;*/
+}
+
+#register {
+    left: 450px;
+    /*z-index: 21;
+    opacity: 0;*/
+}
+
+/*#toregister:target ~ #wrapper #register,
+#tologin:target ~ #wrapper #login{
+	z-index: 22;
+	animation-name: fadeInLeft;
+	animation-delay: .1s;
+}
+
+.animate{
+	animation-duration: 0.5s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+#toregister:target ~ #wrapper #login,
+#tologin:target ~ #wrapper #register{
+	animation-name: fadeOutLeftBig;
+}
+
+@keyframes fadeOutLeft {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+}
+
+.animate{
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-fill-mode: both;
+	
+	-moz-animation-duration: 0.5s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-fill-mode: both;
+	
+	-o-animation-duration: 0.5s;
+	-o-animation-timing-function: ease;
+	-o-animation-fill-mode: both;
+	
+	-ms-animation-duration: 0.5s;
+	-ms-animation-timing-function: ease;
+	-ms-animation-fill-mode: both;
+	
+	animation-duration: 0.5s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}*/

@@ -20,6 +20,8 @@ body {
 	margin: 150px;
 	display: grid;
 	place-items: center;
+	background-image: url('5.jpg');
+	background-size: 100%;
 }
 
 ul {
@@ -34,7 +36,7 @@ a {
 	cursor: pointer;
 	padding: 5px 15px;
 	background: #eee;
-	color: #0048AA;
+	color: #000000;
 	border: 0;
 	font-size: 17px;
 	font-weight: 500;
@@ -46,15 +48,15 @@ a {
 	max-width: 1000px;
 	min-width: 800px;
 	max-height: 800px;
-	background: #fff;
+	background: #1b1b1b;
 	margin: 30px auto;
 	overflow: hidden;
 	border-radius: 10px;
-	box-shadow: 2px 9px 25px #0b2a5b;
+	box-shadow: 2px 9px 25px #000000;
 }
 
 .chat-header {
-	background: #0d3575;
+	background: #1b1b1b;
 	color: #fff;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
@@ -72,7 +74,7 @@ a {
 }
 
 .chat-sidebar {
-	background: #0d3575;
+	background: #1b1b1b;
 	color: #fff;
 	padding: 20px 20px 60px;
 	overflow-y: auto;
@@ -96,7 +98,8 @@ a {
 .chat-messages {
 	height: 500px;
     padding: 16px;
-    display: flex;
+	display: flex;
+	background-color: white;
 	flex-direction: column;
 	justify-content: flex-end;
     overflow-y: auto;
@@ -154,9 +157,9 @@ a {
 }
 
 .you-message .message-text {
-	background: #0048AA;
+	background: #1b1b1b;
 	color: white;
-	border: 1px solid #0048AA;
+	border: 1px solid #1b1b1b;
 	border-radius: 14px 14px 0 14px;
 }
 
@@ -175,7 +178,7 @@ a {
 
 .chat-form-container {
 	padding: 20px 30px;
-	background-color: #0d3575	;
+	background-color: #1b1b1b;
 	
 }
 
@@ -195,22 +198,23 @@ a {
 	max-width: 500px;
 	margin: 80px auto;
 	color: #fff;
-	box-shadow: 2px 9px 25px #0b2a5b;
+	box-shadow: 2px 9px 25px #1b1b1b;
 	border-radius: 10px;
 	overflow: hidden;
+	
 }
 
 .join-header {
 	text-align: center;
 	padding: 20px;
-	background: #0d3575;
+	background: #1b1b1b;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 }
 
 .join-main {
 	padding: 30px 40px;
-	background: #0d3575;
+	background: #1b1b1b;
 	color: #eee;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
@@ -255,7 +259,7 @@ a {
 	height: 40px;
 	max-width: 80px;
 	background: #eee;
-	color: #0d3575;
+	color: #1b1b1b;
 	font-weight: 600;
 	margin: 0 auto;
 	display: block;

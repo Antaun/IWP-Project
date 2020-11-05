@@ -14,6 +14,8 @@ app.use(express.static(path.join(__dirname, 'Public')));
 
 const botName = 'Admin';
 
+var socketids = [];
+
 // Run when a Client connects
 io.on('connection', socket => {
     socket.on('joinRoom', ({ username, room }) => {
@@ -35,7 +37,8 @@ io.on('connection', socket => {
     // Listen for chatMessage
     socket.on('chatMessage', (msg) => {
         const user = getCurrentUser(socket.id);
-        io.to(user.room).emit('message', formatMessage(user.username, msg, socket.id));
+        socketids[socket.id] = msg.id;
+        io.to(user.room).emit('message', formatMessage(user.username, msg, msg.id));
     });
 
     // Broadcast when a User Disconnects

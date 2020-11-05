@@ -11,6 +11,7 @@ const { username, room } = Qs.parse(location.search, {
 
 const socket = io();
 
+
 // Join Chat Room
 socket.emit('joinRoom', { username, room });
 
@@ -23,7 +24,9 @@ socket.on('roomUsers', ({ room, users}) => {
 // Message from Server
 socket.on('message', message => {
     console.log(message);
+    console.log(socket.id);
     outputMessage(message, socket.id);
+    const id = socket.id;
 
     // Scroll Down after getting Message
     chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -48,7 +51,7 @@ chatForm.addEventListener('submit', (e) => {
 function outputMessage(message, id) {
     const div = document.createElement('div');
     div.classList.add('other-message');
-    if (id === socket.id) {
+    if (id === socket) {
         div.classList.add('you-message');
     }
     div.innerHTML = ` <div class="message-title"><span>${message.username}</span></div>

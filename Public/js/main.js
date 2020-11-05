@@ -50,10 +50,8 @@ chatForm.addEventListener('submit', (e) => {
 
 function outputMessage(message, id) {
     const div = document.createElement('div');
-    div.classList.add('other-message');
-    if (id === socket) {
-        div.classList.add('you-message');
-    }
+    div.classList.add('you-message');
+    
     div.innerHTML = ` <div class="message-title"><span>${message.username}</span></div>
     <div class="message-text">${message.text}</div>
     <div class="message-time"><span>${message.time}</span></div>`;
